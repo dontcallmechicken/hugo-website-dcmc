@@ -1,18 +1,24 @@
 baseURL = "https://gokarna-hugo.netlify.app"
-defaultContentLanguage = "en"
+defaultContentLanguage = "de"
+languageCode = "en"
 enableEmoji = true
 enableRobotsTXT = true
-languageCode = "en"
-# Choose one of emacs, trac or perldoc
-pygmentsStyle = "monokai"
 theme = "gokarna"
 title = "Gokarna"
 
-[params]
-  avatarAltText = "avatar"
-  avatarSize = "size-m"
-  avatarURL = "/images/avatar.webp"
+# Define the copyright notice for your site. The notice will only be displayed on page Kinds.
+# The years of 'date' and 'lastmod' in the front matter are used to create a date range for your copyrighted material.
+#copyright = "Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved."
 
+# Hugo lets you choose the color scheme for the codeblocks.
+# You can choose from the options here: https://xyproto.github.io/splash/docs/all.html
+# You can choose one of this preselection: monokai, emacs, trac, perldoc, nord and nordic.
+pygmentsStyle = "nord"
+
+[params]
+  # Inject arbitrary HTML via the <head> tag
+  # Best used for importing custom JavaScript, CSS, or analytics
+  # customHeadHTML = ""
   customHeadHTML = """
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
@@ -34,18 +40,88 @@ title = "Gokarna"
     </script>
   """
 
-  description = "Sky above, sand below and peace within"
-  footer = "The Marauders"
-  metaKeywords = ["blog", "gokarna", "hugo"]
-  showBackToTopButton = true # true or false for "back to top" button on posts and pages
+  # Choose the color shown when hyperlinks are hovered over
+  # Default is #FF4D4D
+  #accentColor = "#FF4D4D"
+  
+  # Set the content font-size.
+  # Default is 17.5px
+  #fontSize = "17.5px"
 
+  # Resource URL for the site avatar (home page and header)
+  avatarURL = "/images/avatar.webp"
+
+  # Describe the avatar for screen readers
+  avatarAltText = "avatar"
+
+  # Set the avatar's size: size-xs, size-s, size-m, size-l & size-xl
+  avatarSize = "size-m"
+
+  # Configure how post dates are displayed
+  #dateFormat = "January 2, 2006"
+  
+  # Configure how post dates are displayed
+  # with date format Tokens
+  # See https://gohugo.io/functions/time/format/
+  # Friday, January 27, 2023
+  #dateFormat = ":date_full"
+  # January 27, 2023
+  dateFormat = ":date_long"
+  # Jan 27, 2023
+  #dateFormat = ":date_medium"
+  # 1/27/23
+  #dateFormat = ":date_short"
+  # 11:44:58 pm Pacific Standard Time
+  #dateFormat = ":time_full"
+  # 11:44:58 pm PST
+  #dateFormat = ":time_long"
+  # 11:44:58 pm
+  #dateFormat = ":time_medium"
+  # 11:44 pm
+  #dateFormat = ":time_short"
+  
+  # Home page meta description
+  description = "Sky above, sand below & peace within"
+  
+  # Second line of the Home page meta description
+  description2 = "Gokarna is an opinionated theme with a focus on minimalism and simplicity."
+
+  # Footer text (i.e. author/project name)
+  footer = "The Marauders"
+
+  # Define SEO keywords
+  metaKeywords = ["blog", "gokarna", "hugo"]
+
+  # Define how many posts are displayed on the home page
+  # showPostsOnHomePage must be "popular" or "recent"
+  numberPostsOnHomePage = 4
+
+  # Display a "back to top" button on posts and pages: true, false
+  # May not render on smaller screen sizes
+  showBackToTopButton = true
+
+  # Display a post’s estimated reading time in minutes.
+  displayReadingTime = false
+
+  # Display posts on the home page:
+  # "popular" (order posts by weight)
+  # "recent" (order posts by date)
+  # "", unset (do not display)
+  showPostsOnHomePage = ""
+
+  # Show the previous and next post in your timeline: "true", "false"
+  # Incompatible with Weight
+  togglePreviousAndNextButtons = false
+
+  # Display icons on the homepage. The specified name should exactly match one of the names from the icons directory.
+  # If you want to add more icons, you can download the svg directly from https://simpleicons.org and
+  # place them in your local icons directory (/static/svg/icons/)
   socialIcons = [
-    {name = "twitter", url = "https://example.com"},
-    {name = "linkedin", url = "https://example.com"},
-    {name = "stackoverflow", url = "https://example.com"},
-    {name = "dribbble", url = "https://example.com"},
-    {name = "instagram", url = "https://example.com"},
+    {name = "github", url = "https://example.com"},
     {name = "twitch", url = "https://example.com"},
+    {name = "youtube", url = "https://example.com"},
+    {name = "discord", url = "https://example.com"},
+    {name = "steam", url = "https://example.com"},
     {name = "email", url = "mailto:example@example.com"}
   ]
 
@@ -99,4 +175,5 @@ title = "Gokarna"
     ordered = false
 
 [minify]
-    minifyOutput = true
+    minifyOutput = false
+

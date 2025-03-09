@@ -1,10 +1,10 @@
 baseURL = "https://gokarna-hugo.netlify.app"
 defaultContentLanguage = "de"
-languageCode = "en"
+languageCode = "de"
 enableEmoji = true
 enableRobotsTXT = true
 theme = "gokarna"
-title = "Gokarna"
+title = "DontCallThisWebsite"
 
 # Define the copyright notice for your site. The notice will only be displayed on page Kinds.
 # The years of 'date' and 'lastmod' in the front matter are used to create a date range for your copyrighted material.
@@ -42,7 +42,7 @@ pygmentsStyle = "nord"
 
   # Choose the color shown when hyperlinks are hovered over
   # Default is #FF4D4D
-  #accentColor = "#FF4D4D"
+  accentColor = "#185C7C"
   
   # Set the content font-size.
   # Default is 17.5px
@@ -55,7 +55,7 @@ pygmentsStyle = "nord"
   avatarAltText = "avatar"
 
   # Set the avatar's size: size-xs, size-s, size-m, size-l & size-xl
-  avatarSize = "size-m"
+  avatarSize = "size-l"
 
   # Configure how post dates are displayed
   #dateFormat = "January 2, 2006"
@@ -81,16 +81,16 @@ pygmentsStyle = "nord"
   #dateFormat = ":time_short"
   
   # Home page meta description
-  description = "Sky above, sand below & peace within"
+  description = "Huhn – Ei – Küken – Gockel! Gute Unterhaltung vom mittleren Niveau."
   
   # Second line of the Home page meta description
-  description2 = "Gokarna is an opinionated theme with a focus on minimalism and simplicity."
+  description2 = "»Wo geströmt wird, wird auch programmiert«"
 
   # Footer text (i.e. author/project name)
-  footer = "The Marauders"
+  footer = "Der Gockel"
 
   # Define SEO keywords
-  metaKeywords = ["blog", "gokarna", "hugo"]
+  metaKeywords = ["stream", "twitch", "geschmeidig", "käse", "chatbot"]
 
   # Define how many posts are displayed on the home page
   # showPostsOnHomePage must be "popular" or "recent"
@@ -117,12 +117,13 @@ pygmentsStyle = "nord"
   # If you want to add more icons, you can download the svg directly from https://simpleicons.org and
   # place them in your local icons directory (/static/svg/icons/)
   socialIcons = [
-    {name = "github", url = "https://example.com"},
-    {name = "twitch", url = "https://example.com"},
-    {name = "youtube", url = "https://example.com"},
-    {name = "discord", url = "https://example.com"},
-    {name = "steam", url = "https://example.com"},
-    {name = "email", url = "mailto:example@example.com"}
+    {name = "github", url = "https://github.com/dontcallmechicken"},
+    {name = "twitch", url = "https://www.twitch.tv/dontcallmechicken"},
+    {name = "youtube", url = "https://www.youtube.com/channel/UCA1mifjFo7ImSZeXYBL1j6g"},
+    {name = "suno", url = "https://suno.com/@dcmc"},
+    #{name = "discord", url = "https://example.com"},
+    #{name = "steam", url = "https://example.com"},
+    #{name = "email", url = "mailto:example@example.com"}
   ]
 
 [menu]
@@ -138,11 +139,11 @@ pygmentsStyle = "nord"
     url = "/posts/"
     weight = 2
 
-  [[menu.main]]
-    name = "Projects"
-    pre = "<span data-feather='code'></span>"
-    url = "/projects/"
-    weight = 3
+#  [[menu.main]]
+#    name = "Projects"
+#    pre = "<span data-feather='code'></span>"
+#    url = "/projects/"
+#    weight = 3
 
   [[menu.main]]
     name = "Tags"
@@ -151,22 +152,28 @@ pygmentsStyle = "nord"
     weight = 4
 
   [[menu.main]]
-    identifier = "github"
-    pre = "<span data-feather='github'></span>"
-    url = "https://github.com/gokarna-theme/gokarna-hugo"
+    name = "Strøm"
+    pre = "<span data-feather='play'></span>"
+    url = "/stream/"
     weight = 5
 
   [[menu.main]]
-    identifier = "buymeacoffee"
-    pre = "<span data-feather='coffee'></span>"
-    url = "https://www.buymeacoffee.com/avijitgupta"
+    identifier = "github"
+    pre = "<span data-feather='github'></span>"
+    url = "https://github.com/dontcallmechicken/dontcallmechicken.github.io"
     weight = 6
+
+  #[[menu.main]]
+    #identifier = "buymeacoffee"
+    #pre = "<span data-feather='coffee'></span>"
+    #url = "https://www.buymeacoffee.com/avijitgupta"
+    #weight = 7
 
   [[menu.main]]
     identifier = "rss"
     pre = "<span data-feather='rss'></span>"
     url = "/index.xml"
-    weight = 7
+    weight = 8
 
 [markup]
   [markup.tableOfContents]
